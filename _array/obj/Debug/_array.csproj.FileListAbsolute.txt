@@ -1,0 +1,12 @@
+c:\users\филипп\documents\visual studio 2013\Projects\_array\_array\bin\Debug\_array.exe.config
+c:\users\филипп\documents\visual studio 2013\Projects\_array\_array\bin\Debug\_array.exe
+c:\users\филипп\documents\visual studio 2013\Projects\_array\_array\bin\Debug\_array.pdb
+c:\users\филипп\documents\visual studio 2013\Projects\_array\_array\obj\Debug\_array.csprojResolveAssemblyReference.cache
+c:\users\филипп\documents\visual studio 2013\Projects\_array\_array\obj\Debug\_array.exe
+c:\users\филипп\documents\visual studio 2013\Projects\_array\_array\obj\Debug\_array.pdb
+E:\_array\_array\bin\Debug\_array.exe.config
+E:\_array\_array\obj\Debug\_array.exe
+E:\_array\_array\obj\Debug\_array.pdb
+E:\_array\_array\bin\Debug\_array.exe
+E:\_array\_array\bin\Debug\_array.pdb
+E:\_array\_array\obj\Debug\_array.csprojResolveAssemblyReference.cache
