@@ -71,8 +71,8 @@ namespace _array
                         }
                     case 6:
                         {
-
-                            matrix3 = matrix1 * matrix1;
+                            int n = Convert.ToInt32(Console.ReadLine());
+                            matrix3 = matrix1.exponent(matrix1, n); 
                             break;
                         }
                 }
