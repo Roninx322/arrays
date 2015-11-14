@@ -123,7 +123,7 @@ namespace _array
             return buf;
         }
         //деление в разработке))
-        //
+        //git chek
         //
         //public double[,] mylt(double[,] mass, double a)
         //{

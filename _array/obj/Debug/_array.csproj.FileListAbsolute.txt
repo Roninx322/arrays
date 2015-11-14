@@ -13,3 +13,6 @@ E:\_array\_array\obj\Debug\_array.csprojResolveAssemblyReference.cache
 D:\programm\_array\_array\bin\Debug\_array.exe.config
 D:\programm\_array\_array\obj\Debug\_array.exe
 D:\programm\_array\_array\obj\Debug\_array.pdb
+C:\Users\филипп\Documents\Visual Studio 2013\Projects\ARRAYS\_array\bin\Debug\_array.exe.config
+C:\Users\филипп\Documents\Visual Studio 2013\Projects\ARRAYS\_array\obj\Debug\_array.exe
+C:\Users\филипп\Documents\Visual Studio 2013\Projects\ARRAYS\_array\obj\Debug\_array.pdb
