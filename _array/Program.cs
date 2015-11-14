@@ -75,6 +75,12 @@ namespace _array
                             matrix3 = matrix1.exponent(matrix1, n); 
                             break;
                         }
+                    case 7:
+                        {
+                            Console.WriteLine("{0,6:f}",matrix1.apredelitel(matrix1));
+                            Console.ReadLine();
+                            break;
+                        }
                 }
                 Console.Clear();
             } while (x != 0);
