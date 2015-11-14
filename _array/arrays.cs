@@ -217,7 +217,7 @@ namespace _array
             }
             return (mass1);
         }
-        //1231212123123
+        //123121212312311111
         public double apr_2x2(arrays mass)
         {
             return (mass.data[0, 0] * mass.data[1, 1] - mass.data[0, 1] * mass.data[1, 0]);
