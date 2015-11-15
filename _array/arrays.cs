@@ -134,17 +134,16 @@ namespace _array
             bool b = false;
             do
             {
+                int i = 0;
                 if (mass.data.GetLength(0) > 2 & mass.data.GetLength(1) > 2)
                 {
-                    for (int i = 0; i < mass.data.GetLength(0); i++)
-                    {
+                    
                         for (int j = 0; j < mass.data.GetLength(1); j++)
                         {
                             double step = i + j;
                             massMinApr = apredelitel(mini(i, j, mass));
                             a += mass.data[i, j] * Math.Pow(-1, step) * massMinApr;
                         }
-                    }
                     b = true;
                 }
                 else
@@ -168,54 +167,62 @@ namespace _array
         }
         public arrays mini(int i, int j, arrays mass)
         {
-            arrays mass1 = new arrays(mass.data.GetLength(0) - 1, mass.data.GetLength(1) - 1);
-            arrays mass2 = new arrays(mass.data.GetLength(0) , mass.data.GetLength(1));
-
-            bool b1 = false;
-            for (int i1 = 0; i1 < mass.data.GetLength(0) - 1; i1++)
+            arrays mass1 = mass;
+            arrays mass2 = new arrays(mass.data.GetLength(0)-1 , mass.data.GetLength(1)-1);
+            double max = mass.data[0, 0];
+            for (int i1 = 0; i1 < mass1.data.GetLength(0); i1++)
             {
-                for (int j1 = 0; j1 < mass.data.GetLength(1); j1++)
+                for (int j1 = 0; j1 < mass1.data.GetLength(1); j1++)
                 {
-                    if (i == i1)
-                        b1 = true;
-
-                    if (b1 == false)
+                    if (max<mass1.data[i1,j1])
                     {
-                        mass2.data[i1, j1] = mass.data[i1, j1];
-                    }
-                    else
-                    {
-                        mass2.data[i1, j1] = mass.data[i1 + 1, j1];
+                        max = mass1.data[i1, j1];
                     }
                 }
             }
-            b1 = false;
-            for (int j1 = 0; j1 < mass.data.GetLength(1) - 1; j1++)
+            max++;
+            for (int i1 = 0; i1 <mass1.data.GetLength(0); i1++)
             {
-                for (int i1 = 0; i1 < mass.data.GetLength(0); i1++)
+                for (int j1 = 0; j1 < mass1.data.GetLength(1); j1++)
                 {
-                    if (j == j1)
-                        b1 = true;
-
-                    if (b1 == false)
+                    if (j1== j || i1==i)
                     {
-                        mass1.data[i1, j1] = mass2.data[i1, j1];
+                        mass1.data[i1, j1] = max;
                     }
-                    else
+                }   
+            }
+            for (int i1 = 0; i1 < mass2.data.GetLength(0); i1++)
+            {
+                for (int j1 = 0; j1 < mass2.data.GetLength(1); j1++)
+                {
+                    if (mass1.data[i1,j1]==max)
                     {
-                        mass1.data[i1, j1] = mass2.data[i1, j1 + 1];
+                        double buf = mass1.data[i1, j1];
+                        mass1.data[i1, j1] = mass1.data[i1, j1 + 1];
+                        mass1.data[i1, j1 + 1] = buf;
                     }
                 }
             }
-
-            for (int j1 = 0; j1 < mass.data.GetLength(1) - 1; j1++)
+            for (int j1 = 0; j1 < mass2.data.GetLength(0); j1++)
             {
-                for (int i1 = 0; i1 < mass.data.GetLength(0) - 1; i1++)
+                for (int i1 = 0; i1 < mass2.data.GetLength(1); i1++)
                 {
-                    mass1.data[i1, j1] = mass2.data[i1, j1];
+                    if (mass1.data[i1, j1] == max)
+                    {
+                        double buf = mass1.data[i1, j1];
+                        mass1.data[i1, j1] = mass1.data[i1+1, j1];
+                        mass1.data[i1+1, j1] = buf;
+                    }
                 }
             }
-            return (mass1);
+            for (int j1 = 0; j1 < mass2.data.GetLength(0); j1++)
+            {
+                for (int i1 = 0; i1 < mass2.data.GetLength(1); i1++)
+                {
+                    mass2.data[i1, j1] = mass1.data[i1, j1];
+                }
+            }
+            return (mass2);
         }
         //1231212123123123132
         public double apr_2x2(arrays mass)
